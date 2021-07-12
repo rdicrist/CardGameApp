@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2021-07-11 18:38:28
+  winner: MyString
+  score1: 1
+  score2: 1
+  comment: MyText
+  deck: MyString
+
+two:
+  date: 2021-07-11 18:38:28
+  winner: MyString
+  score1: 1
+  score2: 1
+  comment: MyText
+  deck: MyString

@@ -1,0 +1,55 @@
+<%= form_with(model: game) do |form| %>
+  <% if game.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(game.errors.count, "error") %> prohibited this game from being saved:</h2>
+
+      <ul>
+        <% game.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.datetime_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :winner %>
+    <%= form.text_field :winner %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Ricki %>
+    <%= form.number_field :score1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Thomas %>
+    <%= form.number_field :score2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label 'Winner\'s Remarks' %>
+    <%= form.text_area :comment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deck %>
+    
+    // <%= form.select :deck, @decks %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+// does not work
+// <%= form_for @article, :url => { :action => "create" }, :html => {:class => "nifty_form"} do |f| %>
+//   <%= f.text_field :title %>
+//   <%= f.text_area :body, :size => "60x12" %>
+//   <%= f.submit "Create" %>
+// <% end %>
